@@ -1,0 +1,57 @@
+.Contact-generale{
+    text-align: center;
+
+    .Contact-info{
+        h2{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 30px;
+        }
+        .border{
+            width: 160px;
+        height: 2px;
+        background: $color;
+        margin: 20px auto;
+        }
+
+    }
+    .Contact-input{
+        .Contact-btn{
+            button{
+                color: white;
+                background-color: $color;
+                padding: 10px;
+                font-size: 16px;
+                border: none;
+                margin-top: 50px;
+            }
+        }
+    }
+    .Blank{
+        margin-top:40px;
+    }
+  
+    
+}
+.Contact-input-first{
+        background: transparent;
+        border: 0px;
+        padding: 12px 20px;
+        line-height: 19px;
+        margin: 0;
+        font-size: 100%;
+        font-family: inherit;
+        color: inherit;
+        border: 1px solid;
+        border-radius: 2px;
+        margin-top: 10px;
+        width: 30%;
+
+    }
+    @media screen and(max-width:1000px){
+        .Contact-input-first{
+        
+            width: auto;
+    
+        }
+    }

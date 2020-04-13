@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../public/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link src="../public/img/Logo.jpg" rel="icon" type="image/png">
+    {{!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Location cars</title>
+</head>
+<body>
+    <header>
+      <div class="Menu" id="Menu">
+        
+        <label for="check" class="checkbtn">
+         <i class="fas fa-bars"></i>
+        </label>
+        <input type="checkbox" id="check">
+        <div class="Menu-link2" >
+         <a href="#Menu">ACCEUIL</a>
+         <a href="#Galerie">GALERIES</a>
+         <a href="#service">SERVICE</a>
+         <a href="#contact">CONTACT</a>
+         <a href="#">RESERVATION</a>
+         <a class="button">Se connecter</a>
+         <a class="button-2" id="btn-two">S'inscrire</a>
+     </div>
+       <div class="logo">
+           <img src="../public/img/logo.jpg" width="100px">
+       </div>
+       <div class="Menu-link" >
+           <a href="#Menu">ACCEUIL</a>
+           <a href="#Galerie">GALERIES</a>
+           <a href="#service">SERVICE</a>
+           <a href="#contact">CONTACT</a>
+           <a href="#">RESERVATION</a>
+       </div>
+       <div class="btn">
+        <button class="button-2" id="btn-two" >S'inscrire</button>
+           <button class="button">Se connecter</button>
+           
+       </div>
+      </div>
+      <div class="header-img">
+          <div class="text">
+            <h1>Le MEILLEUR SITE WEB POUR<br>  LA LOCATION</h1>
+            <h2>Réserver maintenant une voiture</h2>
+            <button>BOOK NOW</button>
+          </div>
+         
+          <!-- <button></button> -->
+      </div>
+    </header>
+    <!-- Partie Galeries -->
+    {{#if resultas}}
+    <div class="alert" style="background-color: red;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    color: white;" role="alert">
+    {{error}}
+</div>
+{{/if}}
+    <section class="Galerie" id="Galerie">
+        <div class="Galerie-title">
+            <h2>GALERIES</h2>
+            <div class="border"></div>
+
+        </div>
+        <button class="w3-button w3-black w3-display-left" onclick="Incrementer(-1)">&#10094;</button>
+        <div class="mySlides Galerie-first">
+            <div class="Galerie-info">
+                <h3 id="titre"></h3>
+                <div class="border2"></div>
+                <div class="Galerie-info-first">
+                    <span id="prix"></span>
+                    <span id="money">&nbsp;</span><br>
+                    <span id="desc"></span><br>
+                    <button>RESERVER MAINTENANT</button>
+                </div>    
+            </div>
+            <div class="Galerie-image">
+                <img src="../public/img/Galerie/img3.png" id="image" class="taille">
+            </div>
+
+        </div>
+        <!-- <div class="mySlides Galerie-first">
+
+            <div class="Galerie-info">
+                <h3>HYUNDAI</h3>
+                <div class="border2"></div>
+                <div class="Galerie-info-first">
+                    <span>168</span>
+                    <span>&nbsp;DH*</span><br>
+                    <span> Kilométrage illimité + Service Inclus </span><br>
+                    <button>RESERVER MAINTENANT</button>
+                </div>
+                
+            </div>
+            <div class="Galerie-image">
+                <img src="img/Galerie/img2.png" class="taille">
+            </div>
+
+        </div> -->
+        <!-- <div class="mySlides Galerie-first">
+
+            <div class="Galerie-info">
+                <h3>DACIA</h3>
+                <div class="border2"></div>
+                <div class="Galerie-info-first">
+                    <span>200</span>
+                    <span>&nbsp;DH*</span><br>
+                    <span> Kilométrage illimité + Service Inclus </span><br>
+                    <button>RESERVER MAINTENANT</button>
+                </div>
+                
+            </div>
+            <div class="Galerie-image">
+                <img src="img/Galerie/img3.png" class="taille">
+            </div>
+
+        </div> -->
+        <button class="w3-button w3-black w3-display-right" id="exp" onclick="Incrementer(1)">&#10095;</button>  
+    </section>
+    <!-- Service -->
+    <section class="service" id="service">
+        <h1 class="section-title">Services</h1>
+        <div class="border"></div>
+        <div class="containner">
+
+            <div class="service-box">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="service-title">Location des voitures</div>
+                    <div class="service-desc">
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque ratione rem porro, nihil.</p>   
+                    </div>
+            </div>
+            <div class="service-box">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+
+
+                    </div>
+                    <div class="service-title">Maintenance des voitures</div>
+                    <div class="service-desc">
+                     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque ratione rem porro, nihil.</p>
+                    </div>
+            </div>
+            <div class="service-box">
+                    <div class="service-icon">
+                      <i class="fas fa-brush"></i>
+                    </div>
+                    <div class="service-title">Nétoiyage des voiture</div>
+                    <div class="service-desc">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et eaque ratione rem porro, nihil.</p>
+                     
+                    </div>
+            </div>
+            </div>
+    </section>
+    <!-- CONTACT NOUS -->
+    <section class="Contact" id="contact">
+        <div class="Contact-generale" >
+            <div class="Contact-info">
+             <h2>CONTACT</h2>
+             <div class="border"></div>
+            </div>
+            <div class="Blank"></div>
+            <div class="Contact-input">
+                <div>
+                    <div>
+                        <input type="text" class="Contact-input-first inpttext" id="name" placeholder="Votre Nom">
+                    </div>
+                    <div>
+                        <input type="text" class="Contact-input-first inpttext" id="email" placeholder="Votre Email">
+                    </div>
+                </div>
+                <div>
+                    <textarea class="Contact-input-first inpttext" id="text" placeholder="Votre Message"></textarea>
+                </div>
+                <div class="Contact-btn">
+                    <button id="env">ENVOYER</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Marque -->
+    <div class="Blank"></div>
+    {{>footer}}
+    <!-- Login -->
+    <form class="bg-modal" method="POST" action="Login">
+        <div class="modal-content">
+            <div class="close">+</div>
+            <img src="../public/img/img5.png" class="taille" alt="logo">
+            <div class="form">
+              <input type="Email" placeholder="Email" name="email" class="entrer" onkeyup='this.value=this.value.toUpperCase()'>
+              <div class="erreur"></div>
+              <input type="password" placeholder="Mot passe" name="mtp" class="entrer" onkeyup='this.value=this.value.toUpperCase()'>
+              <div class="erreur"></div>
+               <input class="button" class="btnconnecter" type="submit" id="btncss" class="enter2" value="Se connecter" >
+            
+        </div>
+    </div>
+    </form>
+    <!-- Inscription -->
+
+    <form class="bg-modal-2" method="POST" action="Inscription">
+        <div class="modal-content2">
+            <div class="close">+</div>
+            <img src="../public/img/img5.png" class="taille" alt="logo">
+            <div class="form">
+              <input type="text" placeholder="name" class="enter2" name="nom" onkeyup='this.value=this.value.toUpperCase()'>
+              <div class="erreur2"></div>
+              <input type="Email" placeholder="Email" class="enter2" name="email" onkeyup='this.value=this.value.toUpperCase()'>
+              <div class="erreur2"></div>
+              <input type="password" placeholder="Mot passe" class="enter2" name="password" onkeyup='this.value=this.value.toUpperCase()'>
+              <div class="erreur2"></div>
+              <input type="password" placeholder="Confirmer Mot passe" class="enter2" onkeyup='this.value=this.value.toUpperCase()'>
+              <div class="erreur2"></div>
+              <input class="button" type="submit" id="btninscription" class="enter2" value="S'inscrire" >
+            </div>
+        </div>
+    </form>
+
+
+    <script src="../public/js/file.js"></script>
+    {{!-- <script src="../public/js/file3.js"></script> --}}
+</body>
+</html>

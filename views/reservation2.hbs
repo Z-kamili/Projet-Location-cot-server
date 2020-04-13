@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../public/css/style2.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link src="../public/img/Logo.jpg" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="Menu" id="Menu">
+          
+          <label for="check" class="checkbtn">
+           <i class="fas fa-bars "></i>
+          </label>
+          <input type="checkbox" id="check">
+          <div class="Menu-link2" >
+            <a href="index.html">ACCEUIL</a>
+            <a href="#R">RESERVATION</a>
+            <a href="#C">POURQUOI NOUS</a>
+       </div>
+         <div class="logo">
+             <img src="../public/img/logo.jpg" width="100px">
+         </div>
+         <div class="Menu-link" >
+             <a href="index.html">ACCEUIL</a>
+             <a href="#R">RESERVATION</a>
+             <a href="#C">POURQUOI NOUS</a>
+         </div>
+         <!-- <div class="btn">
+          <button class="button-2" id="btn-two" >S'inscrire</button>
+             <button class="button">Se connecter</button>
+             
+         </div> -->
+     <a href="home"><img src="../public/img/add.png" class="add"></a>   
+
+        </div>
+        <div class="header-img">
+            <div class="text">
+              <h1>La Reservation Des Voitures</h1>
+              <h2>Réserver maintenant une voiture</h2>
+              <button>BOOK NOW</button>
+            </div>
+           
+            <!-- <button></button> -->
+        </div>
+      </header>
+      <section>
+        <div  id="R" class="Resr">
+            <h1 >RÉSERVER UN VÉHICULE!</h1>
+            <div class="D1">
+                
+            <select name="cars" id="liste" class="cars" onchange="getSelectValue()">
+             {{#each produit}}
+<option>{{this.nom}}</option>
+{{/each}}
+              </select>
+              <div class="D">
+                <div class="De">
+              <div class="depart"><img src="../public/img/agenda.png" ><strong>Date Debut</strong> </div>
+              <input class="date" onchange="getdate2()" id="datetime" type="date" name="bday">
+                </div>
+                <div class="De">
+                <div class="depart"> <img src="../public/img/maps.png" >  <strong>DUREE</strong></div>
+                <input class="text" type="number" id="inpt" name="bday">
+               </div>
+               </div>
+                 <button id="btnres">Réserver maintenant</button>
+
+                </div>
+                 
+
+          
+           </div>
+      </section>
+      <section class="generale">
+          <div class="reservation">
+              <div class="res-info">
+                <div class="information">
+                    
+                 <div  class="image"></div>
+                </div>
+            </div>
+              <div>
+                 
+           <form method="POST" action="/Confirmation">
+                     <div>
+                         <div class="form-input">
+                             <p>
+                                 <label>Nom complet <span >*</span></label><br />
+                                 <span><input type="text" name="name" id="nom" class="inpttext" placeholder="Votre nom" /></span>
+                                 </p>
+                                 <p>
+                                 <label>Voiture <span>*</span></label><br />
+                                 <span ><input type="text" class="inpttext" id="nomv" name="nomv" name="voiture" /></span>
+                                 </p>
+                                 
+                         </div>
+                       <div  class="form-input">
+                         <p>
+                             <label>Téléphone <span>*</span></label><br />
+                             <span><input type="number" class="inpttext" id="tele" placeholder="Votre Téléphone" /></span>
+                         </p>
+                         <p class="one-half">
+                         <label>Email <span>*</span></label><br/>
+                         <span><input type="email" class="inpttext" id="mail" name="email" placeholder="Votre Email"/></span>
+                         </p>
+                       </div>
+                       <div class="form-input">
+                        <p>
+                          <label>Nombre Personne</label><br />
+                          <span ><input type="number" class="inpttext" id="adress" name="nbrpersonne" placeholder="votre nombre"/></span>
+                          </p>
+                        <p >
+                          <label>Date Permis <span >*</span></label><br />
+                          <span><input type="date" class="inpttext" id="datepermis" name="age" onchange="getdate1()" placeholder="Votre number"/></span>
+                          </p>
+                        
+                       </div>
+                      
+                    
+                    
+                     <p class="submit"><input type="submit" class="inpttext3" id="reserv"   value="Reserver"  /></p>
+                     
+                     </div>
+              </form>
+              </div>
+          </div>
+         
+      </section>
+      <section>
+        <div id="C" class="condition">
+          <div class="cond1">
+          <h1>POUR QUOI NOUS</h1>
+           <div class="C1" >
+             <img src="../public/img/Galerie/1.jpg" class="tailles">
+           </div>
+          <div class="CO">
+              <h2>longue durée</h2>
+              <p>Trouvez votre voiture pour une longue durée avec Belina Car. Des prix pas chers pour votre LLD à Marrakech</p>
+          </div>
+          <!--
+          <div class="cond1">
+              <h1 >CONDITION</h1>
+               <div class="C1"style="background-image: url('images/2.jpg')" ></div>
+              <div class="CO">
+                  <h2>Durée</h2>
+                  <p>La location est consentie pour la durée déterminée au contrat sauf prolongation conventionnelle accordée par le loueur.</p>
+              </div>
+              <div class="cond1">
+                  <h1 >CONDITION</h1>
+                   <div class="C1"style="background-image: url('images/3.jpg')" ></div>
+                  <div class="CO">
+                      <h2>Âge minimal</h2>
+                      <p>Le conducteur doit avoir au minimum 21 ans, et détenir un permis de conduire valable depuis 2 ans au moins.</p>
+                  </div>
+      </div>
+     </div> -->
+     </div>
+      </div>
+      </section>
+     {{>footer}}
+   
+        </div>
+      <script>
+        function validEmail(email){
+                   
+    var exp =  new RegExp(/^[A-Za-z-0-9-_.]+@[A-Za-z]{4,7}.[A-Za-z]{2,3}$/);
+    var valid = exp.test(email);
+      
+      if(valid){
+        
+          return true;
+          
+        }
+     else{
+     
+        return false;
+     }
+      
+    }
+         function validname(nom){
+      var letters =/^[A-Za-z]+$/;
+      
+
+      if(letters.test(nom)==true){
+             return true;
+         }
+     else{
+          return false;  
+         }
+      } 
+document.getElementById("reserv").addEventListener("click",(e)=>{
+    var input = document.getElementsByClassName("inpttext");
+    var nom = document.getElementById("nom").value,
+    tele = document.getElementById("tele"),email = document.getElementById("mail").value,
+    adr = document.getElementById("adress");
+    
+    if(nom == "" || tele == "" || email == "" || adr == "" || dateEntered == ""){
+        e.preventDefault();
+        alert("vous devez remplir tous les champs");
+    }else{
+        if(!validname(nom)){
+            e.preventDefault();
+            alert("le nom n'est pas valide" + nom);
+            
+        }else{
+            if(!validEmail(email)){
+                e.preventDefault();
+                alert("l'email n'est pas valide");
+               
+            }else{
+                // var datetime = new Date();
+                // var d1 = datetime.getFullYear();
+                // var d2 = dateEntered2.getFullYear();
+                var datetime = new Date();
+            var d2 =     dateDiff(datetime,dateEntered2);
+            console.log(d2);
+                if(d2<=2){
+                    e.preventDefault();
+                    alert("la date du permis doit etre supurieur que 2 ans");
+                    
+                }else{
+                   
+                    nom2.innerText = nom;
+                    prenom2.innerText = prenom;
+                    Date_debut2.innerText = dateEntered;
+                    titre.innerText = voiture[g].nom;
+                    image.src = voiture[g].path;
+                    console.log(voiture[g].path);
+                    EMAIL.innerText = email;
+                    // document.querySelector('body').style.overflowY = "hidden";
+                    document.getElementsByClassName("bg-modal-2")[0].style.display = "flex";
+                    console.log("hello");
+                }
+            }
+        }
+    }
+    
+});
+      </script>
+    <script src="../public/js/file2.js"></script>
+    <script src="../public/js/file3.js"></script>
+
+</body>
+</html>

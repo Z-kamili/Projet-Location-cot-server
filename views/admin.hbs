@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ACCEUIL</title>
+  <link rel="stylesheet" href="../public/css/Styles.css">
+    <link rel="stylesheet" href="../public/css/animation.css">
+    <link href="../public/img/Images/logo.png" rel="icon" type="image/png">
+  <!-- <link rel="stylesheet" href="../css/styles3.css"> -->
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script  src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <link src="../public/img/Logo.jpg" rel="icon" type="image/png">
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").click(function(){
+			   $(".wrapper").toggleClass("collapse");
+			});
+		});
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
+    </div>
+    <div class="top_menu">
+      <div class="logo"><img src="../public/img/Logo.jpg" class="logo2"> </div>
+      
+    </div>
+  </div>
+  
+   <div class="sidebar">
+      <ul>
+        <li><a href="#" class="active">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span class="title">ACCEUIL</span></a></li>
+        <li><a href="Produit" >
+          <span class="icon"><i class="fas fa-plus-square"></i>
+
+          </span>
+          <span class="title">Ajoute</span>
+          </a></li>
+        <li><a href="Modifier">
+          <span class="icon"><i class="fas fa-address-card"></i></span>
+          <span class="title">Modification</span>
+          </a></li>
+        <li><a href="Suppression">
+          <span class="icon"><i class="fas fa-window-close"></i>
+
+          </span>
+          <span class="title">Suppression</span>
+          </a></li>
+        <li><a href="Login">
+          <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+          <span class="title">DECONNECTER</span>
+          </a></li>
+          
+    </ul>
+  </div>
+  <div class="hero">
+<div class="highway"></div>
+<div class="city"></div>
+
+
+<div class="car">
+    <img src="public/img/car.png"> 
+</div>
+<div class="wheel">
+    <img src="public/img/wheel.png" class="back-wheel">
+    <img src="public/img/wheel.png" class="front-wheel">
+
+</div>
+  </div>	
+</body>
+</html>

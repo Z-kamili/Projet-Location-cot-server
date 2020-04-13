@@ -1,0 +1,54 @@
+.bg-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 2; }
+
+.modal-content {
+  width: 475px;
+  height: 360px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative; }
+  .modal-content .close {
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer; }
+  .modal-content .taille {
+    width: 80px; }
+  .modal-content .form input {
+    width: 60%;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 10px; }
+  .modal-content .form .erreur {
+    margin: 15px;
+    position: relative;
+    top: 7Opx;
+    top: -19px;
+    font-size: 12px;
+    text-align: left;
+    left: 79px; }
+  .modal-content .form a {
+    color: white;
+    background-color: #05AAEA;
+    border: 1px solid #05AAEA;
+    padding: 10px 80px;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 10px; }
+    .modal-content .form a:hover {
+      cursor: pointer; }
+
+/*# sourceMappingURL=seconnecter.css.map */

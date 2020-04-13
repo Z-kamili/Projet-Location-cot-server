@@ -1,0 +1,248 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    width: $pourcentage;
+}
+
+.Menu{
+    display: flex;
+    width: $pourcentage;
+    justify-content: space-around;
+    background-color: $white;
+    height: 70px;
+    #check{
+        display: none;
+    }
+    .checkbtn{
+    position: relative;
+    left: -210px;
+    font-size: 30px;
+    color: $color;
+    cursor: pointer;
+    display: none;
+    }
+    .btn{
+      margin-top: 20px;
+      
+      button{
+        color: #686f7a;
+        background-color: $white;
+        border: 1px solid $gray;
+        padding: 10px;
+        font-size: 16px;
+      }
+      #btn-two{
+          background-color: $color;
+          color: $white;
+          border: $color;
+      }
+    }
+    .logo{
+        margin-top: -10px;
+    }
+    
+}
+.Menu-link{
+  margin-top: 25px;
+    a{
+        padding: 10px;
+        text-decoration: none;
+        &:hover{
+            color: $color;
+            cursor: pointer;
+        }
+    }
+
+}
+.Menu-link2{
+    top: 97px;
+    position: absolute;
+    left:-70px;
+    z-index: 1;
+    display: none;
+    a{
+        display: block;
+        background-color: $white;
+        width: $pourcentage + 200%;
+        height: 60px;
+        text-align: center;
+        color: black;
+        text-decoration: none;
+        &:hover{
+            color: $color;
+            cursor: pointer;
+        }
+        
+
+    }
+}
+    .header-img{
+        background-image: url(../img/header/merc.jpg);
+        height: 500px;
+        background-position: center;
+        width: $pourcentage;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: auto;
+        animation: animate 15s ease-out infinite;
+        .text{
+          text-align: left;
+          padding-left: 112px;
+          position: relative;
+          top: 100px;
+          button{
+            color: $white;
+            background-color: $color;
+            border: 1px solid $gray;
+            padding: 10px;
+            font-size: 16px;
+          }
+          h1{
+              color: $white;
+              font-size: 40px;
+          }
+          h2{
+              color: $color;
+              font-size: 30px;
+          }
+        }
+        h1{
+            font-family: 'Montserrat';
+        }
+
+    }
+    /*animation*/
+    @keyframes animate {
+        0%,100%{
+            background-image: url(../img/header/merc.jpg);
+        }
+        33%{
+            background-image: url(../img/header/scc.jpg);
+        }
+        67%{
+            background-image: url(../img/header/scc2.jpg);
+        }
+        
+    }
+    /*responsive*/
+    @media screen and (max-width:1200px){
+
+        .Menu{
+            display: flex;
+            width: $pourcentage;
+            justify-content: space-around;
+            background-color: $white;
+            height: 70px;
+            #check{
+                display: none;
+            }
+            .checkbtn{
+                position: relative;
+                left: 10px;
+                font-size: 30px;
+                color: #05AAEA;
+                cursor: pointer;
+                display: block;
+                top: 20px;
+            }
+            .btn{
+              margin-top: 20px;
+              display: none;
+              button{
+                color: #686f7a;
+                background-color: $white;
+                border: 1px solid $gray;
+                padding: 10px;
+                font-size: 16px;
+              }
+              #btn-two{
+                  background-color: $color;
+                  color: $white;
+                  border: $color;
+              }
+            }
+            .logo{
+                text-align: center;
+                width: 100%;
+            }
+            
+        }
+        .Menu-link{
+          margin-top: 25px;
+          display: none;
+            a{
+                padding: 10px;
+                text-decoration: none;
+                &:hover{
+                    color: $color;
+                    cursor: pointer;
+                }
+            }
+        
+        }
+        #check:checked ~ .Menu-link2{
+            display: block;
+        }
+        .Menu-link2{
+            top: 90px;
+            position: absolute;
+            left:-70px;
+            z-index: 1;
+            a{
+                display: block;
+                background-color: $white;
+                width: $pourcentage + 200%;
+                height: 60px;
+                text-align: center;
+                color: black;
+                text-decoration: none;
+                &:hover{
+                    color: $color;
+                    cursor: pointer;
+                }
+                
+        
+            }
+        }
+        .header-img{
+            background-image: url(../img/header/merc.jpg);
+            height: 500px;
+            background-position: center;
+            width: $pourcentage;
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: auto;
+            animation: animate 15s ease-out infinite;
+            .text{
+                text-align: left;
+                padding-left: 112px;
+                position: relative;
+                top: 100px;
+                width: 80%;
+              button{
+                color: $white;
+                background-color: $color;
+                border: 1px solid $gray;
+                padding: 10px;
+                font-size: 10px;
+              }
+              h1{
+                  color: $white;
+                  font-size: 30px;
+              }
+              h2{
+                  color: $color;
+                  font-size: 20px;
+              }
+            }
+            h1{
+                font-family: 'Montserrat';
+            }
+    
+        }
+     
+    }

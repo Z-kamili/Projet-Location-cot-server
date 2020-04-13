@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ACCEUIL</title>
+  <link rel="stylesheet" href="../../public/css/styles.css">
+  <!-- <link rel="stylesheet" href="../css/styles3.css"> -->
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script  src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link src="../../public/img/Logo.jpg" rel="icon" type="image/png">
+  <link href="../app/img/logoadmin.png" rel="icon" type="image/png">
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").click(function(){
+			   $(".wrapper").toggleClass("collapse");
+			});
+		});
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
+    </div>
+    <div class="top_menu">
+      <div class="logo"><img src="../../public/img/Logo.jpg" class="logo2"> </div>
+      
+    </div>
+  </div>
+  
+  <div class="sidebar">
+      <ul>
+        <li><a href="admin">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span class="title">ACCEUIL</span></a></li>
+        <li><a href="#"  class="active">
+          <span class="icon"><i class="fas fa-plus-square"></i>
+
+          </span>
+          <span class="title">Ajoute</span>
+          </a></li>
+        <li><a href="Modifier" >
+          <span class="icon"><i class="fas fa-address-card"></i></span>
+          <span class="title">Modification</span>
+          </a></li>
+        <li><a href="Suppression">
+          <span class="icon"><i class="fas fa-window-close"></i>
+
+          </span>
+          <span class="title">Suppression</span>
+          </a></li>
+        <li><a href="Deconnecter">
+          <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+          <span class="title">DECONNECTER</span>
+          </a></li>
+          
+    </ul>
+  </div>
+  <div class="content">
+    <form id="form" method="POST" action="AjouteProduit" >
+      <h1>Ajout Produit</h1>
+      <div class="inputCont">
+          <!-- <span>Email :</span> -->
+          <input type="text" id="name" placeholder="Nom" name="name">
+      </div>
+      <div class="inputCont">
+          <!-- <span>Mot de passe :</span> -->
+          <input type="number" id="prix" placeholder="Prix" name="prix">
+      </div>
+      <div class="inputCont">
+        <!-- <span>Mot de passe :</span> -->
+        <input type="text" id="desc" placeholder="Description" name="desc">
+    </div>
+    <div class="inputCont">
+      <!-- <span>Mot de passe :</span> -->
+      <input type="file" id="files" placeholder="Path" name="image">
+  </div>
+      <!-- <input id="btnLogin" type="submit">Login</button> -->
+   <a ><input type="submit"  id="btnLogin" value="Ajouter"></a>   
+  </form>
+  </div>
+  
+	<script src="../public/js/Validation.js"></script>
+</body>
+</html>

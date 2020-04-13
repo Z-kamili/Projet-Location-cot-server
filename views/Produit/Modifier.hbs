@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ACCEUIL</title>
+	<link rel="stylesheet" href="../../public/css/Styles.css">
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script  src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link src="../../public/img/Logo.jpg" rel="icon" type="image/png">
+  <link href="../app/img/logoadmin.png" rel="icon" type="image/png">
+	<script>
+		$(document).ready(function(){
+			$(".hamburger").click(function(){
+			   $(".wrapper").toggleClass("collapse");
+			});
+		});
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="one"></div>
+       <div class="two"></div>
+       <div class="three"></div>
+    </div>
+    <div class="top_menu">
+      <div class="logo"><img src="../../public/img/Logo.jpg" class="logo2"> </div>
+      
+    </div>
+  </div>
+  
+<div class="sidebar">
+      <ul>
+        <li><a href="admin">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span class="title">ACCEUIL</span></a></li>
+        <li><a href="Produit">
+          <span class="icon"><i class="fas fa-plus-square"></i>
+
+          </span>
+          <span class="title">Ajoute</span>
+          </a></li>
+        <li><a href="Modifier"  class="active">
+          <span class="icon"><i class="fas fa-address-card"></i></span>
+          <span class="title">Modification</span>
+          </a></li>
+        <li><a href="Suppression">
+          <span class="icon"><i class="fas fa-window-close"></i>
+
+          </span>
+          <span class="title">Suppression</span>
+          </a></li>
+        <li><a href="Login">
+          <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+          <span class="title">DECONNECTER</span>
+          </a></li>
+          
+    </ul>
+  </div>
+  <div class="content">
+    <form id="form" method="POST" action="/Modifier">
+        <h1>Modifier Produit</h1>
+        <div class="inputCont">
+            <!-- <span>Email :</span> -->
+            <select type="text" placeholder="Nom" onchange="getselected()" id="nomvoiture" name="name">
+{{#each produit}}
+<option>{{this.nom}}</option>
+{{/each}}
+            </select>
+        </div>
+        <div class="inputCont">
+            <!-- <span>Mot de passe :</span> -->
+            <input type="text" placeholder="nom" id="nom" name="nom">
+        </div>
+        <div class="inputCont">
+            <!-- <span>Mot de passe :</span> -->
+            <input type="number" placeholder="Prix" id="price" name="prix">
+        </div>
+        <div class="inputCont">
+            <!-- <span>Mot de passe :</span> -->
+            <input type="text" placeholder="etat" id="etats" name="etats">
+        </div>
+        <div class="inputCont">
+          <!-- <span>Mot de passe :</span> -->
+          <input type="text" placeholder="Description" id="Description" name="desc">
+      </div>
+      <div class="inputCont">
+        <!-- <span>Mot de passe :</span> -->
+        <input type="file" placeholder="Path" id="Image" name="image">
+    </div>
+        <!-- <input id="btnLogin" type="submit">Login</button> -->
+     <a><input type="submit"  id="btnLogin" class="btnmodifier" value="Modifier"></a>   
+    </form>
+  </div>
+  	<script>
+     
+      var request = new XMLHttpRequest();
+var data_produit = "";
+var url = "http://localhost:8000/DATA/Produit.json";
+         document.getElementsByClassName("btnmodifier")[0].addEventListener("click",(e)=>{
+            var nom = document.getElementById("nomvoiture").value;
+            var image = document.getElementById("Image").value;
+           if(nom == "choisir une voiture" || image == ""){
+             e.preventDefault();
+              alert("vous devez faire choisir un produit et choisie l'image");
+           }
+         });
+        function getselected(){
+         request.open("GET", url);
+        request.onload = function(){
+          console.log("hello");
+        if (request.status == 200){
+            data_produit = JSON.parse(request.responseText);
+            console.log(data_produit);
+            Remplirchamps(data_produit);   
+    }
+   
+  };
+   request.send(null); 
+   }
+
+         function Remplirchamps(data){
+             nom = document.getElementById("nomvoiture").value;
+                 for(var i = 0 ;i < data.length;i++){
+                   if(data[i].nom == nom){
+                     // console.log(data[i].prix);
+                      document.getElementById("nom").value = data[i].nom;
+                    document.getElementById("price").value = data[i].prix;
+                    document.getElementById("Description").value = data[i].desc;
+                    document.getElementById("etats").value  = data[i].etats; 
+                    console.log(data[i].etats);
+                 break;
+                   }
+                 
+                 }
+            
+
+
+         }
+       
+    </script>
+	
+</body>
+</html>

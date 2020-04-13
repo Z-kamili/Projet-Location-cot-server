@@ -1,0 +1,48 @@
+.service{
+    background: url(bg.jpg);
+    background-size: cover;
+    padding: 60px 0;
+    background-color: $color;
+    .section-title{
+        text-align: center;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 30px;
+      }
+      .containner{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+        overflow: hidden;
+        .service-box{
+            max-width: 33.33%;
+            padding: 10px;
+            text-align: center;
+            color: $white;
+            cursor: pointer;
+            margin-bottom: 50px;
+            .service-icon{
+                display: inline-block;
+                width: 70px;
+                height: 70px;
+                border: 3px solid $white;
+                border-radius: 100%;
+                color: #fff;
+                margin-bottom: 30px;
+                margin-top: 16px;
+                transition: 0.7s linear;
+                .fas,.fab{
+                    padding-top: 20px;
+                }
+                &:hover{
+                    background: $white;
+                    color: $color;
+                }
+              }
+          }
+      }
+}

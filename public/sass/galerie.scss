@@ -1,0 +1,263 @@
+.Galerie-title{
+ text-align: center;
+ font-family: 'Montserrat';
+ h2{
+     font-size: 200%;
+ }
+    .border {
+        width: 160px;
+        height: 2px;
+        background: $color;
+        margin: 20px auto;
+    }
+    
+}
+.Galerie{
+    height: 700px;
+    .mySlides{
+        display:flex;
+    }
+    .w3-black {
+        margin-left: 100px;
+        width: 50px;
+        border: $pourcentage;
+        color: $color;
+        border-radius: 50%;
+        background-color: transparent;
+        height: 20px;
+        position: relative;
+        top: 235px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 32px;
+        outline: none;
+        border: $white;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    #exp{
+        float: right;
+        position: relative;
+        top: -280px;
+        right: 99px;
+    }
+}
+
+.Galerie-first{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+    .Galerie-info{
+        .border2{
+        width: 80px;
+        height: 10px;
+        background: $color;
+        margin-top: -35px;
+        }
+        h3{
+            font-size: 276%;
+            color: $color;
+        }
+    }
+    .Galerie-info-first{
+        font-family: 'Montserrat';
+        margin-top: 30px;
+        span{
+           
+            font-size: 156%;
+        }
+        button{
+            color: $white;
+            background-color: $color;
+            border: $white;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 20px;
+            outline: none;
+        }
+    }
+    
+}
+@media screen and (max-width:1200px){
+    .Galerie-first{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: -98px;
+        text-align: center;
+        .Galerie-info{
+            display: block;
+            .border2{
+            width: 80px;
+            height: 10px;
+            background: $color;
+            margin-top: -35px;
+           display: none;
+            }
+            h3{
+                font-size: 276%;
+                color: $color;
+            }
+        }
+        .Galerie-info-first{
+            font-family: 'Montserrat';
+            margin-top: 30px;
+            span{
+               
+                font-size: 156%;
+            }
+            button{
+                color: $white;
+                background-color: $color;
+                border: $white;
+                padding: 10px;
+                font-size: 16px;
+                margin-top: 20px;
+                outline: none;
+            }
+        }
+        
+    }
+    .Galerie{
+        height: 700px;
+       
+        .w3-black {
+            margin-left: 100px;
+            width: 50px;
+            background-color: transparent;
+            border: $pourcentage;
+            color: $color;
+            border-radius: 50%;
+            height: 20px;
+            position: relative;
+            top: 235px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 32px;
+            outline: none;
+            border: $white;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        #exp{
+            float: right;
+            position: relative;
+            top: -390px;
+            right: 99px;
+        }
+    }
+
+}
+@media screen and (max-width:600px){
+    .taille{
+        width: 80%;
+    }
+    .Galerie{
+        height: 700px;
+        .w3-black {
+            margin-left: 16px;
+            width: 50px;
+            background-color: transparent;
+            border: 100%;
+            color: #05AAEA;
+            border-radius: 50%;
+            height: 20px;
+            position: relative;
+            top: 280px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 32px;
+            outline: none;
+            border: white;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            #exp{
+                float: right;
+                position: relative;
+                top: -196px;
+                right: 12px;
+            }
+    }
+}
+@media screen and (max-width:400px){
+    .taille{
+        width: 80%;
+    }
+    .Galerie{
+        height: 700px;
+        .w3-black {
+            margin-left: 16px;
+            width: 50px;
+            background-color: transparent;
+            border: 100%;
+            color: #05AAEA;
+            border-radius: 50%;
+            height: 20px;
+            position: relative;
+            top: 280px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 32px;
+            outline: none;
+            border: white;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            #exp{
+                float: right;
+                position: relative;
+                top: -173px;
+                right: 12px;
+            }
+    }
+}
+@media screen and (max-width:320px){
+    .taille{
+        width: 80%;
+    }
+    .Galerie{
+        height: 700px;
+        
+        .w3-black {
+            margin-left: 5px;
+            width: 50px;
+            background-color: transparent;
+            border: 100%;
+            color: #05AAEA;
+            border-radius: 50%;
+            height: 20px;
+            position: relative;
+            top: 280px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 32px;
+            outline: none;
+            border: white;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            #exp{
+                float: right;
+                position: relative;
+                top: -149px;
+                right: 12px;
+            }
+    }
+}
+

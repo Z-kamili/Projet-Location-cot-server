@@ -1,0 +1,382 @@
+
+
+%width-resv{
+    
+    width: 70%;
+ }
+ .add{
+    margin: -2px;
+    margin-left: 5px;
+    height: 39px;
+    width: 41px;
+    margin-top: 15px;
+    cursor: pointer;
+ }
+ 
+
+.Resr{
+    color: #ffffff;
+    background-color:$color;
+    text-align: center;
+    width: 100%;
+    height: 450px;
+    padding-top: 3%;
+    
+ h1{
+     
+     margin-bottom: 50px;
+     font-size: 30px;
+     color: $white;
+ }
+ 
+ 
+ .cars{
+    padding: 15px;
+    width: 98%;
+    border: 1px solid $color3;
+    margin-left: 16px;
+ }
+
+}
+.D1{
+  border: none;
+ 
+  width:80%;
+  margin: auto;
+  
+  #btnres{
+      margin-top:18px ;
+   background-color:$white;
+   color: $color2;
+    border: 0;
+    cursor: pointer;
+   
+    font-size: 128%;
+   
+    padding: 17px 30px;
+    border-radius: 2px;
+    transition: all .5s ease;
+    &:hover{
+        background-color:$color3;
+
+   color: $white;
+
+    }
+  }
+    
+}
+
+.D{
+    
+    display: flex;
+    width: 100%;
+    margin: 0;
+    margin-top: 30px;
+    
+}
+
+
+.De{
+    
+    @extend %width-resv;
+    display: flex;
+    #inpt{
+        width: 365px;
+    }
+}
+
+.depart{
+    background-color: white;
+    width: 221px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    border-radius: 2px;
+    border: 1px solid #444444;
+    color: #444444;
+    font-size: 15px;
+    margin-left: 20px;
+    
+    
+     img{
+        margin-right: 4px;
+        width: 18px;
+        height: 18px;
+       
+       
+
+    }
+    
+}
+
+.ville{
+    border-radius: 2px;
+    @extend %width-resv; 
+    width: 100%;
+    margin-right: 30px; 
+    border-right: 2px;
+    border: 1px solid $color3;
+}
+
+.date{
+    @extend %width-resv; 
+    width: 100%; 
+    margin-right: 0px;
+    border-radius: 2px;
+    text-align: center;
+    border: 1px solid $color3;
+}
+
+.time{
+    @extend %width-resv; 
+    width:80%; 
+    margin-left: 30px; 
+    border-radius: 2px;
+    text-align: center;
+    border: 1px solid $color3;
+}
+/*reservation */
+.generale{
+    display: none;
+    .reservation{
+        display: flex;
+        .res-info{
+            width:50%;
+            .information{
+                text-align: center;
+                h1{
+                    font-size: 276%;
+                    color: #05AAEA;
+                }
+                p{
+                    font-size: 156%;
+                }
+            }
+        }
+           form{
+               width: 50%;
+               margin-top: 80px;
+               .taille{
+                   width: 300px;
+               }
+               .form-input{
+                   display: flex;
+                   justify-content: space-between;
+                   #age{
+                       width: 248px !important;
+                   }
+                   #adress{
+                       height: 50px;
+                   }
+               }
+               label{
+                   margin: 10px;
+               }
+               .inpttext{
+                   background: transparent;
+               border: 0px;
+               padding: 12px 20px;
+               line-height: 19px;
+               margin: 10px;
+               font-size: 100%;
+               font-family: inherit;
+               color: inherit;
+               border: 1px solid;
+               border-radius: 2px;
+               -webkit-appearance: none;
+               -moz-appearance: none;
+               -webkit-transition: all 0.2s;
+               transition: all 0.2s;
+               }
+               .inpttext3{
+                   background: transparent;
+                   border: 0px;
+                   padding: 12px 20px;
+                   line-height: 19px;
+                   margin: 10px;
+                   font-size: 100%;
+                   font-family: inherit;
+                   color: inherit;
+                   border: 1px solid;
+                   border-radius: 2px;
+                   -webkit-appearance: none;
+                   -moz-appearance: none;
+                   -webkit-transition: all 0.2s;
+                   transition: all 0.2s;
+                   background-color: $color2;
+                   color:$white;
+                   border: none;
+               }
+           }
+       
+       }
+       
+}
+
+
+
+@media screen and (max-width:1000px){
+
+
+    .D{
+    
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        margin-top: 30px;
+        
+    }
+    .De{
+        margin-top: 20px;
+        width: 100%;
+        #inpt{
+            width: 100%;
+        }
+    }
+    .Resr{
+        height: 477px;
+    }
+    .reservation{
+        flex-direction: column;
+        .res-info{
+            width: 100% !important;
+        }
+     
+    }
+    #taille{
+        width: 333px;
+    }
+
+    form{
+    /* margin-top: 80px; */
+    width: 70% !important;
+    margin-top: 80px !important;
+    text-align: center;
+        .taille{
+            width: 300px;
+        }
+        .form-input{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+         
+            #age{
+                width: 248px !important;
+            }
+            #adress{
+                height: 50px;
+            }
+        }
+        label{
+            margin: 10px;
+        }
+        .inpttext{
+        background: transparent;
+        border: 0px;
+        padding: 12px 20px;
+        line-height: 19px;
+        margin: 10px;
+        font-size: 100%;
+        font-family: inherit;
+        color: inherit;
+        border: 1px solid;
+        border-radius: 2px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
+        width: 220px;
+        }
+        .inpttext3{
+            background: transparent;
+            border: 0px;
+            padding: 12px 20px;
+            line-height: 19px;
+            margin: 10px;
+            font-size: 100%;
+            font-family: inherit;
+            color: inherit;
+            border: 1px solid;
+            border-radius: 2px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+            background-color: $color2;
+            color:$white;
+            border: none;
+        }
+    }
+   
+    
+    
+
+
+
+
+}
+@media screen and (max-width:900px){
+
+
+    form{
+        /* margin-top: 80px; */
+        width: 60%;
+        margin: auto;
+            .taille{
+                width: 300px;
+            }
+            .form-input{
+                display: flex;
+             
+                #age{
+                    width: 248px !important;
+                }
+                #adress{
+                    height: 50px;
+                }
+            }
+            label{
+                margin: 10px;
+            }
+            .inpttext{
+            background: transparent;
+            border: 0px;
+            padding: 12px 20px;
+            line-height: 19px;
+            margin: 10px;
+            font-size: 100%;
+            font-family: inherit;
+            color: inherit;
+            border: 1px solid;
+            border-radius: 2px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
+            }
+            .inpttext3{
+                background: transparent;
+                border: 0px;
+                padding: 12px 20px;
+                line-height: 19px;
+                margin: 10px;
+                font-size: 100%;
+                font-family: inherit;
+                color: inherit;
+                border: 1px solid;
+                border-radius: 2px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+                background-color: $color2;
+                color:$white;
+                border: none;
+            }
+        }
+       
+
+
+}
